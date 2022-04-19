@@ -1,8 +1,8 @@
 namespace raid_counter
 {
-    public partial class Form1 : Form
+    public partial class RaidCostCounter : Form
     {
-        public Form1()
+        public RaidCostCounter()
         {
             InitializeComponent();
         }
@@ -12,12 +12,12 @@ namespace raid_counter
             var keyboardHookManager = new KeyboardHookManager();
             keyboardHookManager.Start();
 
-
             keyboardHookManager.RegisterHotkey((int)VirtualKeys.Numpad7, () =>
             {
                 rocket_up_down.Invoke((MethodInvoker)delegate
                 {
-                    rocket_up_down.Value++;
+                    if (rocket_up_down.Value < rocket_up_down.Maximum)
+                        rocket_up_down.Value++;
                 });
             });
 
@@ -25,7 +25,8 @@ namespace raid_counter
             {
                 rocket_up_down.Invoke((MethodInvoker)delegate
                 {
-                    rocket_up_down.Value--;
+                    if (rocket_up_down.Value > rocket_up_down.Minimum)
+                        rocket_up_down.Value--;
                 });
             });
 
@@ -34,7 +35,8 @@ namespace raid_counter
             {
                 c4_up_down.Invoke((MethodInvoker)delegate
                 {
-                    c4_up_down.Value++;
+                    if (c4_up_down.Value < c4_up_down.Maximum)
+                        c4_up_down.Value++;
                 });
             });
 
@@ -42,7 +44,8 @@ namespace raid_counter
             {
                 c4_up_down.Invoke((MethodInvoker)delegate
                 {
-                    c4_up_down.Value--;
+                    if (c4_up_down.Value > c4_up_down.Minimum)
+                        c4_up_down.Value--;
                 });
             });
 

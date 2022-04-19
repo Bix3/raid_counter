@@ -1,6 +1,6 @@
 ﻿namespace raid_counter
 {
-    partial class Form1
+    partial class RaidCostCounter
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RaidCostCounter));
             this.rocket_picture_box = new System.Windows.Forms.PictureBox();
             this.c4_picture_box = new System.Windows.Forms.PictureBox();
             this.rocket_up_down = new System.Windows.Forms.NumericUpDown();
@@ -44,7 +44,7 @@
             this.rocket_picture_box.Image = ((System.Drawing.Image)(resources.GetObject("rocket_picture_box.Image")));
             this.rocket_picture_box.Location = new System.Drawing.Point(12, 12);
             this.rocket_picture_box.Name = "rocket_picture_box";
-            this.rocket_picture_box.Size = new System.Drawing.Size(370, 296);
+            this.rocket_picture_box.Size = new System.Drawing.Size(215, 193);
             this.rocket_picture_box.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.rocket_picture_box.TabIndex = 0;
             this.rocket_picture_box.TabStop = false;
@@ -52,9 +52,9 @@
             // c4_picture_box
             // 
             this.c4_picture_box.Image = ((System.Drawing.Image)(resources.GetObject("c4_picture_box.Image")));
-            this.c4_picture_box.Location = new System.Drawing.Point(425, 12);
+            this.c4_picture_box.Location = new System.Drawing.Point(233, 12);
             this.c4_picture_box.Name = "c4_picture_box";
-            this.c4_picture_box.Size = new System.Drawing.Size(370, 296);
+            this.c4_picture_box.Size = new System.Drawing.Size(215, 193);
             this.c4_picture_box.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.c4_picture_box.TabIndex = 1;
             this.c4_picture_box.TabStop = false;
@@ -62,15 +62,16 @@
             // rocket_up_down
             // 
             this.rocket_up_down.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rocket_up_down.Location = new System.Drawing.Point(12, 314);
+            this.rocket_up_down.Location = new System.Drawing.Point(12, 211);
             this.rocket_up_down.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.rocket_up_down.Name = "rocket_up_down";
+            this.rocket_up_down.ReadOnly = true;
             this.rocket_up_down.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.rocket_up_down.Size = new System.Drawing.Size(370, 114);
+            this.rocket_up_down.Size = new System.Drawing.Size(215, 114);
             this.rocket_up_down.TabIndex = 2;
             this.rocket_up_down.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.rocket_up_down.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
@@ -78,29 +79,30 @@
             // c4_up_down
             // 
             this.c4_up_down.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.c4_up_down.Location = new System.Drawing.Point(425, 314);
+            this.c4_up_down.Location = new System.Drawing.Point(233, 211);
             this.c4_up_down.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.c4_up_down.Name = "c4_up_down";
+            this.c4_up_down.ReadOnly = true;
             this.c4_up_down.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.c4_up_down.Size = new System.Drawing.Size(370, 114);
+            this.c4_up_down.Size = new System.Drawing.Size(215, 114);
             this.c4_up_down.TabIndex = 3;
             this.c4_up_down.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Form1
+            // RaidCostCounter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(807, 468);
+            this.ClientSize = new System.Drawing.Size(458, 333);
             this.Controls.Add(this.c4_up_down);
             this.Controls.Add(this.rocket_up_down);
             this.Controls.Add(this.c4_picture_box);
             this.Controls.Add(this.rocket_picture_box);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "RaidCostCounter";
+            this.Text = "RaidCostCounter";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.rocket_picture_box)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.c4_picture_box)).EndInit();
